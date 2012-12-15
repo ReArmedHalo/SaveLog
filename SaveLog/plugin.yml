@@ -1,0 +1,22 @@
+name: SaveLog
+version: 1.0
+description: SaveLog automatically copies and clears the server.log file
+author: App1eGenius93
+website: http://mc.dustinschreiber.com/SaveLog
+main: com.DustinSchreiber.SaveLog.SaveLog
+database: false
+commands:
+  savelog:
+    description: SaveLog
+    permission: savelog.backup
+    usage: |
+      /savelog backupnow - Clears server.log (after backing up first)
+      /savelog clear     - Clears log file only
+    
+permissions:
+  savelog.notify:
+    description: Allows the player to see SaveLog's status messages
+    default: op
+  savelog.backup:
+    description: Grants access to /savelog backupnow
+    default: op

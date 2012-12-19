@@ -44,7 +44,7 @@ public class SaveLog extends JavaPlugin implements Listener {
 	    }
 	    generateTimestamp();
 	    if(config.getBoolean("Auto")){
-	    	shedule();
+	    	schedule();
 	    }
 	    backupLogs = DirPath.listFiles().length;
 	}
@@ -115,7 +115,7 @@ public class SaveLog extends JavaPlugin implements Listener {
 		}
 	}
 	
-	public void shedule(){
+	public void schedule(){
 		boolean clear = getConfig().getBoolean("Auto");
 		if(clear == false){
 			return;

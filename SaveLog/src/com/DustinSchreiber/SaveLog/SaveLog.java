@@ -36,9 +36,9 @@ public class SaveLog extends JavaPlugin implements Listener {
 	    FileConfiguration config = getConfig();
 	    if (!configPath.exists()){
 	      this.logger.info("[SaveLog] Creating Default Config");
-	      config.options().header("SaveLog Configuration\nBackupsToSave - Number of auto backups\nBackupInterval - Number of minutes between auto backups\nAuto - TRUE enables auto backup\nNOTE: Backup here also clears afterward");
+	      config.options().header("SaveLog Configuration\nBackupsToSave - Number of auto backups\nBackupInterval - Number of seconds between auto backups\nAuto - TRUE enables auto backup\nNOTE: Backup here also clears afterward");
 	      config.set("BackupsToSave", Integer.valueOf(5));
-	      config.set("BackupInterval", Integer.valueOf(1440));
+	      config.set("BackupInterval", Integer.valueOf(86400));
 	      config.set("Auto", Boolean.valueOf(true));
 	      saveConfig();
 	    }

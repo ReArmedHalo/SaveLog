@@ -52,7 +52,6 @@ public class SaveLog extends JavaPlugin implements Listener {
 	@Override
 	public void onDisable(){
 	    generateTimestamp();
-		saveConfig();
 		try{
 	    	copyLog();
 	    }catch (IOException e){
